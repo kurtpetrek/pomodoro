@@ -1,103 +1,282 @@
-/* Need a CLEAR CSS ?
-============================ 
-
-html5doctor.com Reset Stylesheet
-v1.6.1
-Last Updated: 2010-09-17
-Author: Richard Clark - http://richclarkdesign.com 
-Twitter: @rich_clark
-
-
-html, body, div, span, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-abbr, address, cite, code,
-del, dfn, em, img, ins, kbd, q, samp,
-small, strong, sub, sup, var,
-b, i,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section, summary,
-time, mark, audio, video {
-    margin:0;
-    padding:0;
-    border:0;
-    outline:0;
-    font-size:100%;
-    vertical-align:baseline;
-    background:transparent;
-}
+@import 'https://fonts.googleapis.com/css?family=Pacifico|Orbitron&effect=shadow-multiple';
 
 body {
-    line-height:1;
+  background: rgb(00,00,200);
+  margin: 0px;
+  overflow-x: hidden;
 }
 
-article,aside,details,figcaption,figure,
-footer,header,hgroup,menu,nav,section { 
-    display:block;
+audio {
+	display: none;
 }
 
-nav ul {
-    list-style:none;
+* {
+  font-family: 'Pacifico', cursive;
 }
 
-blockquote, q {
-    quotes:none;
+@keyframes shake {
+  0% {
+    top: -5px;
+    opacity: .7;
+  }
+  7% {
+    right: 5px;
+    opacity: .3;
+  }
+  9% {
+    top: -5px;
+    opacity: .7;
+  }
+  14% {
+    right: -2px;
+    opacity: .3;
+  }
+  19% {
+    top: -3px;
+    opacity: .7;
+  }
+  20% {
+    right: 5px;
+    opacity: .3;
+  }
+  30% {
+    top: 0px;
+    opacity: .7;
+  }
+  40% {
+    top: -5px;
+    opacity: .3;
+  }
+  50% {
+    right: 0px;
+    opacity: .7;
+  }
+  60% {
+    top: 0px;
+    opacity: .3;
+  }
+  70% {
+    top: -2px;
+    opacity: .7;
+  }
+  80% {
+    top: -5px;
+    opacity: .3;
+  }
+  90% {
+    right: 5px;
+    opacity: .7;
+  }
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
-    content:'';
-    content:none;
+@keyframes active {
+  0% {
+    color: #eee;
+  }
+  50% {
+    color: #999;
+  }
+  0% {
+    color: #eee;
+  }
 }
 
-a {
-    margin:0;
-    padding:0;
-    font-size:100%;
-    vertical-align:baseline;
-    background:transparent;
+@keyframes clicked {
+  0%{
+    background: rgba(240, 240, 240, 1);
+  color: #111;
+  border-color: #111;
+  }
+  50%{
+    background: rgba(10, 10, 10, 1);
+  color: #eee;
+  border-color: #eee;
+  }
+  100%{
+    background: rgba(240, 240, 240, 1);
+  color: #111;
+  border-color: #111;
+  }
 }
 
-ins {
-    background-color:#ff9;
-    color:#000;
-    text-decoration:none;
+.clicked-class {
+  animation: clicked .25s;
 }
 
-mark {
-    background-color:#ff9;
-    color:#000; 
-    font-style:italic;
-    font-weight:bold;
+#banner {
+  font-family: 'Pacifico', cursive;
+  position: relative;
+  top: -40px;
+  text-align: center;
+  font-size: 50px;
+  overflow: inherit;
+  z-index: -1;
 }
 
-del {
-    text-decoration: line-through;
+#banner h1 {
+  position: absolute;
+  color: #eee;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  z-index: -1;
 }
 
-abbr[title], dfn[title] {
-    border-bottom:1px dotted;
-    cursor:help;
+#banner h1:first-child {
+  color: #777;
+  left: 10px;
+  opacity: .5;
+  animation: shake 2s infinite linear;
 }
 
-table {
-    border-collapse:collapse;
-    border-spacing:0;
+#banner h1:nth-child(2) {
+  color: #bbb;
+  top: 10px;
+  opacity: .5;
+  animation: shake 6s infinite linear;
 }
 
-hr {
-    display:block;
-    height:1px;
-    border:0;   
-    border-top:1px solid #cccccc;
-    margin:1em 0;
-    padding:0;
+#fire {
+  margin-top: 100px;
+  position: absolute;
+  width: 100%;
+  height: 600px;
+  background: -moz-radial-gradient(center, ellipse cover, rgba(255, 197, 120, 1) 0%, rgba(252, 169, 61, 0) 69%, rgba(251, 157, 35, 0) 100%);
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(255, 197, 120, 1) 0%, rgba(252, 169, 61, 0) 69%, rgba(251, 157, 35, 0) 100%);
+  background: radial-gradient(ellipse at center, rgba(255, 197, 120, 1) 0%, rgba(252, 169, 61, 0) 69%, rgba(251, 157, 35, 0) 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#ffc578', endColorstr='#00fb9d23', GradientType=1);
+  z-index: -2;
 }
 
-input, select {
-    vertical-align:middle;
+#fire img {
+  position: absolute;
+  width: 20%;
+  min-width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  margin-top: 300px
 }
 
-*/
+#grass {
+  width: 100%;
+  z-index: -1;
+  height: 450px;
+  top: 400px;
+  position: absolute;
+  background-color: #00A651;
+  z-index: -3;
+}
+
+#grass img {
+  top: 0px;
+  position: absolute;
+}
+
+#adjustments {
+  text-align: center;
+  font-family: 'Orbitron', sans-serif;
+}
+
+#adjustments div {
+  display: inline-block;
+  margin-top: 140px;
+}
+
+@media screen and (max-width: 500px) {
+  #adjustments div {
+    display: inline-block;
+    margin-top: 200px;
+  }
+  #banner {
+    font-size: 40px;
+  }
+}
+
+#adjustments h1 {
+  position: relative;
+  top: -20px;
+  font-family: 'Orbitron', sans-serif;
+  padding: 5px 2px 0px 2px;
+  border-radius: 5px;
+  border: 2px solid white;
+  background: black;
+}
+
+#adjustments h2 {
+  font-size: 30px;
+}
+
+#adjustments button {
+  font-family: 'Orbitron', sans-serif;
+  height: 30px;
+  margin: 0px 4px;
+  border: 2px solid #eee;
+  background: rgba(10, 10, 10, 1);
+  border-radius: 10px;
+  position: relative;
+  top: -36px;
+  color: #eee;
+  width: 40px;
+  font-size: 20px;
+  outline: none;
+  transition: all .25s, border-radius 1s;
+  animation: clicked .25s;
+}
+
+#work-adjustment {
+  background: url(http://kurtpetrek.com/weather/images/sun.svg);
+}
+
+#break-adjustment {
+  background: url(http://kurtpetrek.com/weather/images/moon.svg);
+}
+
+#work-adjustment,
+#break-adjustment {
+  margin: 5px;
+  color: #eee;
+  text-align: center;
+  width: 120px;
+  height: 114px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#timer {
+  text-align: center;
+  color: white;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 60px;
+}
+
+#control {
+  display: block;
+  margin: auto;
+  border: 2px solid #eee;
+  background: rgba(10, 10, 10, 1);
+  border-radius: 10px;
+  color: #eee;
+  font-size: 25px;
+  padding: 5px;
+  box-sizing: border-box;
+  padding-right: 10px;
+  outline: none;
+  transition: all .25s, border-radius 1s;
+  animation: clicked .25s;
+}
+
+#kp-icon {
+  background-image: url(http://kurtpetrek.com/random/images/kp-icon.png);
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 5px 5px 5px 5px;
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+  z-index: 3;
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+}

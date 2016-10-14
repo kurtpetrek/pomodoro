@@ -5,16 +5,13 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Description ? 
-    <meta name="description" content=""> 
-  -->
+  <!-- Description  -->
+    <meta name="description" content="A Pomodoro Clock"> 
+ 
   <meta name="author" content="Kurt Petrek">
-  <title></title>
+  <title>KP Pomodoro</title>
 
   <!-- CSS -->
-  <!-- Strapped ? 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> 
-  -->
   <!-- Google fonts -->
   <!-- Self styles -->
   <link rel="stylesheet" type="text/css" href="css/main.css">
@@ -30,18 +27,53 @@
 </head>
 
 <body>
+  <a target="_blank" href="http://kurtpetrek.com">
+  <div id="kp-icon"></div>
+  </a>
   
+  <div id="container">
+    <section id="banner">
+      <h1>Free Code Camp</h1>
+      <h1>Free Code Camp</h1>
+      <h1>Free Code Camp</h1>
+    </section> <!-- / #banner-->
+    
+    <section id="fire">
+     <img src="images/fire.svg" />
+    </section>
+    <section id="grass">
+      <img src="images/grass.svg" />
+    </section>
+    <section id="adjustments">
+      <div id="break-adjustment">
+        <h2>Break Time</h2>
+        <h1 id="break-time-display">5:00</h1>
+        <button id="break-time-down">-</button>
+        <button id="break-time-up">+</button>
+      </div>
+      <div id="work-adjustment">
+        <h2>Work Time</h2>
+        <h1 id="work-time-display">25:00</h1>
+        <button id="work-time-down">-</button>
+        <button id="work-time-up">+</button>
+      </div>
+    </section><!-- / #adjustments-->
+    <button id="control">Start</button>
+    <h1 id="timer" class="font-effect-shadow-multiple">25:00</h1>
+      
+   <audio src="http://echoesofethos.com/game3/audio/BellLow.mp3" id="work-start-sound"></audio>
+   <audio src="http://echoesofethos.com/game3/audio/BellHigh.mp3" id="control-start-sound" ></audio>
+   <audio src="http://echoesofethos.com/game3/audio/Gong.mp3" id="break-start-sound"></audio>
   
+  </div>
   
   
   <!-- Scripts 
   ============================= -->
-  <!-- jQuery ?
+  <!-- jQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-  -->
-  <!-- strapped ?
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
   <script src="js/main.js"></script>
+  
 </body>
 
 </html>
